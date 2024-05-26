@@ -2,7 +2,7 @@ name: TechTrends - Package with Docker
 
 on:
   push:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -29,4 +29,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: quyettrinh91/techtrends:latest
+          tags: quyettrinh91/techtrends:v1.0.0
