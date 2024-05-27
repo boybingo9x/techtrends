@@ -3,6 +3,14 @@ import os
 from flask import Flask, jsonify, json, render_template, request, url_for, redirect, flash
 from werkzeug.exceptions import abort
 import logging
+import sys
+
+logging.basicConfig(
+    level=logging.DEBUG,  # Set the desired log level
+    format='%(asctime)s - %(levelname)s - %(message)s',  # Define the log format
+    stream=sys.stdout  # Output logs to STDOUT
+)
+logging.captureWarnings(True)
 
 # Function to get a database connection.
 # This function connects to database with the name `database.db`
